@@ -1,0 +1,13 @@
+{%extends 'index.html'%}
+
+{%block b1%}
+
+{%for person in persons %}
+{% comment %} {%if forloop.last%} {% endcomment %}
+<p>{{forloop.counter }} . Hello This is {{person.name}} ,my age is {{person.age}}</p>
+{% comment %} {%endif%} {% endcomment %}
+{%empty%}
+No person found
+{%endfor%}
+
+{%endblock%}
